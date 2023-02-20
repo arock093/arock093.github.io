@@ -29,7 +29,15 @@
 </head>
   
 <body>
-
+  <div id="t7"></div>
+  <script>
+  async function getTest() {
+      let test = await fetch('test.html');
+      let y = await test.text()
+      document.querySelector('#t7').innerHTML = y;
+     }
+    getTest()
+  </script>
   <!-- Add your site or application content here -->
   <p>Hello world! This is HTML5 Boilerplate.</p>
   <button type="button" onClick="test()">New</button>
